@@ -124,6 +124,7 @@ dialect: 'postgres',
   	A tela de cadastro exibe o logo do sistema na parte superior e logo abaixo os tipos de usuários (Paciente/ Médico), campos: Nome completo; Data de Nascimento; CPF, E-mail, Senha, Confirmação de senha e para médicos especialidade e o número do CRM e botão para cadastro.
   
    Paciente	![image](https://github.com/user-attachments/assets/df3373f3-742c-4e33-9c35-0793b1878341)
+   
     Medico ![image](https://github.com/user-attachments/assets/889e9424-2725-4568-a198-f24d34019ebd)
 
 2.3 Tela Inicial do Paciente (Dashboard)
