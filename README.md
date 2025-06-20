@@ -125,7 +125,7 @@ dialect: 'postgres',
   
    Paciente	![image](https://github.com/user-attachments/assets/df3373f3-742c-4e33-9c35-0793b1878341)
    
-    Medico ![image](https://github.com/user-attachments/assets/889e9424-2725-4568-a198-f24d34019ebd)
+   Medico ![image](https://github.com/user-attachments/assets/889e9424-2725-4568-a198-f24d34019ebd)
 
 2.3 Tela Inicial do Paciente (Dashboard)
   	A tela do paciente exibe o logo, saudação, próximas consultas, botão para agendar nova consulta e histórico de atendimentos.
