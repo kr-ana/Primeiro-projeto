@@ -323,20 +323,25 @@ Confirmação por E-mail ou SMS
 •	Nodemailer para e-mail.
 •	Twilio ou SMSDev para SMS
 
+js
 const nodemailer = require('nodemailer');
+
 const transporter = nodemailer.createTransport({
+
 service: 'gmail',
 auth: {
 user: 'suaClinica@gmail.com',
 pass: 'senha
 }
 });
+
 await transporter.sendMail({
 });
 from: 'suaClinica@gmail.com',
 to: 'paciente@email.com',
 subject: 'Confirmação de Consulta',
 text: `Sua consulta foi agendada para ${req.body.data} às ${req.body.hora}.`
+});
 
 Resultado Final
 •	Persistência de consultas médicas em PostgreSQL.
@@ -347,6 +352,7 @@ Resultado Final
 4	Retornar informações para usuário
 JSON de sucesso, erro, ou os dados solicitados
 Payload de entrada:
+
 json
 }
 }
