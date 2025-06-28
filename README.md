@@ -24,19 +24,23 @@ Gerenciador de versão	                         Git + GitHub
 Criação de diagramas com as inicias UML e MER:
 
 Diagrama de Casos de Uso: Cadastro de pacientes, médicos e especialidades
-[Diagrama_Casos_Uso_Consultas_Medicas (1).docx](https://github.com/user-attachments/files/20743159/Diagrama_Casos_Uso_Consultas_Medicas.1.docx)
+[Diagrama_Casos_Uso_Consultas_Medicas (1).docx]
+(https://github.com/user-attachments/files/20743159/Diagrama_Casos_Uso_Consultas_Medicas.1.docx)
 
 Diagrama de sequência: Agendamento de consultas; confirmação/ cancelamento
 
-[Diagrama_Sequencia_Agendamento.docx](https://github.com/user-attachments/files/20743161/Diagrama_Sequencia_Agendamento.docx)
+[Diagrama_Sequencia_Agendamento.docx]
+(https://github.com/user-attachments/files/20743161/Diagrama_Sequencia_Agendamento.docx)
 
 Modelo Entidade-Relacionamento (MER): visualização de agenda 
 
-[MER_Consultas_Medicas.docx](https://github.com/user-attachments/files/20743162/MER_Consultas_Medicas.docx)
+[MER_Consultas_Medicas.docx]
+(https://github.com/user-attachments/files/20743162/MER_Consultas_Medicas.docx)
 
 Elaboração do cronograma inicial:
 
-[Cronograma_Projeto_Consultas_Online.xlsx](https://github.com/user-attachments/files/20743164/Cronograma_Projeto_Consultas_Online.xlsx)
+[Cronograma_Projeto_Consultas_Online.xlsx]
+(https://github.com/user-attachments/files/20743164/Cronograma_Projeto_Consultas_Online.xlsx)
 
 Sistema de Agendamentos de Consultas Médicas Online
 
@@ -135,7 +139,7 @@ dialect: 'postgres',
 2.4 Tela de Agendamento (Dashboard)
   	A tela de agendamento exibe o logo, campo para escolher a especialidade do médico, selecionar médico e logo abaixo o calendário com horários disponíveis e botão para confirmar o agendamento e após a confirmação uma mensagem é enviada por e-mail/SMS.
 
-   ![image](https://github.com/user-attachments/assets/05f25f30-ac23-4d67-ac2e-108fd7ff4cc0)
+  ![image](https://github.com/user-attachments/assets/05f25f30-ac23-4d67-ac2e-108fd7ff4cc0)
 
 2.5 Tela de Médico (Dashboard Médico)
   	A tela exibe nome do médico a especialidade, lista de consultas marcadas, opção para aceitar/rejeitar consulta, ver perfil de paciente e atualizar disponibilidade	
@@ -433,6 +437,159 @@ Benefícios para o usuário
 •	Recebe mensagens claras de sucesso ou erro.
 •	Confirmação com os detalhes da consulta agendada.
 •	Listagem fácil das consultas anteriores ou futuras.
+
+Nesta terceira fase do projeto, foi possível consolidar importantes etapas do planejamento e da implementação da solução. A seguir, descrevemos o que já foi realizado e o que ainda precisa ser desenvolvido, conforme o cronograma inicial e os arquivos entregues até o momento.
+O que já foi feito:
+•	Definição do Tema e do Problema: O tema do sistema e o problema a ser resolvido já foram claramente definidos, servindo de base para todas as decisões do projeto.
+•	Planejamento do Escopo e da Solução: O escopo do projeto foi bem delineado, assim como a proposta de solução, garantindo uma visão clara dos objetivos e funcionalidades.
+•	Escolha das Tecnologias: As tecnologias principais já foram selecionadas:
+   o	Frontend: React.js
+   o	Backend: Node.js com Express
+   o	Banco de Dados: PostgreSQL, com integração via ORM Sequelize
+•	Cronograma Inicial Elaborado: Um planejamento inicial foi criado, com prazos definidos para cada etapa do desenvolvimento.
+•	Início da Estrutura do Backend: Já foram desenvolvidos os primeiros componentes da parte servidor, incluindo:
+   o	Scripts DDL e DML para criação e povoamento do banco.
+   o	Conexão com banco de dados utilizando Sequelize, incluindo configuração via arquivos .env e config/database.js.
+•	Desenvolvimento de Wireframes: Já foram criadas versões iniciais das principais telas do sistema:
+   o	Login e Cadastro
+   o	Dashboards (Paciente, Médico, Administrador)
+   o	Tela de Agendamento
+•	Funcionalidades Iniciais da API: Algumas rotas da API REST já estão implementadas:
+   o	POST /consultas (agendamento de consultas)
+   o	GET /medicos (listagem de médicos)
+   o	Integração funcional com Sequelize
+   o	Estrutura para envio de confirmações por e-mail e SMS já está prevista no backend.
+O que ainda falta fazer:
+•	Finalização do Frontend com React:
+   o	Desenvolver os componentes com base nos wireframes criados.
+   o	Implementar a conexão com o backend utilizando bibliotecas como Axios ou Fetch.
+•	Implementação das Rotas Faltantes no Backend:
+   o	Criar rotas adicionais, como:
+   	GET /consultas/:pacienteId
+   	DELETE /consulta/:id
+   	Outras rotas necessárias conforme o escopo do projeto
+•	Integração completa entre Frontend e Backend: Garantir que o fluxo do sistema funcione de ponta a ponta, com a troca de dados entre cliente e servidor.
+•	Testes de Funcionalidades: Verificar todo o fluxo de uso do sistema, testando os principais casos de uso.
+•	Confirmações por E-mail e SMS:
+   o	Implementar envio de e-mails utilizando Nodemailer
+   o	Configurar envio de SMS via Twilio ou SMSDev
+•	Geração de Relatórios (Admin): Desenvolver a funcionalidade de geração e exportação de relatórios de agendamentos no painel do administrador.
+•	Documentação Final:
+   o	Criar o arquivo README.md com instruções de instalação e uso.
+   o	Incluir prints ou links dos wireframes.
+   o	Organizar todos os arquivos no repositório GitHub.
+•	Entrega Final: Subir o link do repositório GitHub na plataforma da faculdade (AVA/Moodle), conforme instruções do projeto.
+
+Sistema de Agendamento de Consultas Médicas Online
+   Este projeto é uma solução web desenvolvida como parte do Projeto Integrador do curso de Análise e Desenvolvimento de Sistemas - UCEFF. Seu objetivo é facilitar o agendamento de consultas médicas por meio de uma plataforma acessível a pacientes, médicos e administradores.
+Funcionalidades Principais:
+- Cadastro e login de usuários (Paciente, Médico, Administrador)
+- Agendamento de consultas com médicos por especialidade
+- Confirmação de consultas por e-mail (via Nodemailer)
+- Cancelamento de consultas
+- Painéis (dashboards) diferenciados para cada tipo de usuário
+- Relatórios administrativos e exportação de dados
+- Sistema responsivo, acessível via navegadores em desktop e mobile
+
+Tecnologias Utilizadas
+
+Camada Tecnologia
+**Frontend** | React.js
+**Backend** Node.js + Express
+**Banco** PostgreSQL
+**ORM** | Sequelize
+**Email** | Nodemailer
+**Hospedagem** Vercel (frontend) / Render (backend) |
+**Controle de versão** Git + GitHub
+
+Instalação e Execução Local
+Clone o repositório
+```bash
+git clone https://github.com/kr-ana/Primeiro-projeto.git
+
+Implementação dos itens pendentes
+Tela de Agendamento chama POST /consultas
+Tela do Médico → chama GET /consultas/medico/:id
+Dashboard do Paciente → chama GET /consultas/paciente/:id
+
+Confirmações via E-mail e SMS
+Backend - Email (Nodemailer):
+
+js
+const nodemailer = require("nodemailer");
+const transporter = nodemailer.createTransport({
+service: "gmail",
+auth: {
+user: process.env.EMAIL_USER,
+pass: process.env.EMAIL_PASS,
+},
+});
+await transporter.sendMail({
+});
+to: paciente.email,
+subject: "Confirmação de Consulta",
+text: Sua consulta está marcada para ${data} às ${hora}.,
+});
+
+Backend - SMS (Twilio ou SMSDev):
+
+js
+const twilio = require('twilio');
+const client = new twilio(accountSid, authToken);
+client.messages.create({
+});
+body: Consulta confirmada para ${data} às ${hora}.,
+from: '+15017122661',
+});
+
+Criar rotas complementares no backend
+Rotas sugeridas
+DELETE /consulta/:id Cancelar consulta
+PUT /consulta/:id Reagendar/editar consulta
+GET /relatorios/consultas Gerar relatório para admin
+
+Rota DELETE:
+js
+app.delete('/consulta/:id', async (req, res) =< {
+});
+await Consulta.destroy({ where: { id: req.params.id } });
+res.status (200).json({ mensagem: 'Consulta cancelada com sucesso' });
+});
+
+Exportação de relatórios para administrador:
+js
+const { Parser } = require('json2csv');
+const consultas = await Consulta.findAll({ include: [Paciente, Medico] })3
+const parser = new Parser();
+const csv = parser.parse(consultas);
+fs.writeFileSync('relatorio.csv, csv);
+
+Testes completos em todos os perfis
+•	Testar os seguintes fluxos:
+   1.	Login de todos os usuários
+   2.	Agendamento de consultas
+   3.	Cancelamento e alteração
+   4.	Notificações por email e SMS
+•	Ferramentas recomendadas:
+   1.	Manual: navegador + Postman
+   2.	Automatizado: Jest, Supertest, Cypress (frontend)
+•	Documentação técnica e README.md
+   1.	Descrição do sistema
+   2.	Tecnologias usadas
+   3.	Instruções para instalação local
+   4.	Como rodar o backend e o frontend
+   5.	Como testar
+   6.	Link do deploy (Render/Vercel)
+   7.	Capturas de tela
+
+
+
+
+
+
+
+
+
 
 
 
