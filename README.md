@@ -1,4 +1,4 @@
-# Primeiro-projeto
+# Projeto Integrador
 Agendamentos de Consultas Médicas Online
 
 PROBLEMA: Pacientes enfrentam dificuldades para marcar consultas médicas, muitas vezes tendo que ligar para clínicas, esperar atendimento ou enfrentar enormes filas.
